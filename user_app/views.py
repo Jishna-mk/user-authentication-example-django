@@ -52,4 +52,4 @@ def logout(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('home')
+    return redirect('signin')
