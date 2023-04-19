@@ -52,4 +52,5 @@ def logout(request):
 
 def logout(request):
     auth.logout(request)
+    messages.info(request,"You are signed out!!")
     return redirect('signin')
