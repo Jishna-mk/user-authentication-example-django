@@ -11,7 +11,7 @@ def home(request):
 
 def signup(request):
     if request.method=='POST':
-        first_name=request.POST['first_name']
+        first_name=request.POST['first_name']     
         last_name=request.POST['last_name'] 
         username=request.POST['username']
         email=request.POST['email']
@@ -29,8 +29,7 @@ def signup(request):
             user.save()
             messages.info(request,"New user created successfully!")
         return redirect('signin')
-        
-        
+          
     return render(request,"register.html")
 
 def signin(request):
@@ -42,13 +41,15 @@ def signin(request):
         if user is not None:
             auth.login(request,user)
             return redirect('home')
+        
         messages.info(request,"Invalid username or password!")
         return redirect('signin')
     
     return render(request,"login.html")
 
-def logout(request):
-    return render(request,'login.html')
+
+# def logout(request):
+#     return render(request,'login.html')
 
 def logout(request):
     auth.logout(request)

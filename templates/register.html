@@ -17,7 +17,7 @@
       </nav>
     <h1 class="text-center text-success">Learning club</h1>
     <div class="container-fluid">
-        <form  action="{%url 'signup' %}"method="POST"class="row g-3">
+        <form  action="{%url 'signup' %}"method="POST"class="row g-3">       
             {% csrf_token %}
             <div class="col-md-6">
               <label for="first_name" class="form-label">First Name</label>
@@ -36,11 +36,11 @@
                 <input name="email" type="email" class="form-control" id="">
               </div>
             <div class="col-6">
-              <label for="inputAddress" class="form-label">Password</label>
+              <label for="inputPassword" class="form-label">Password</label>
               <input name="password" type="password" class="form-control" id="" placeholder="">
             </div>
             <div class="col-6">
-              <label for="inputAddress2" class="form-label">Confirm Password</label>
+              <label for="inputPassword2" class="form-label">Confirm Password</label>
               <input name="confirm_password" type="password" class="form-control" id="" placeholder="">
             </div>
            
@@ -58,7 +58,7 @@
     </div>
     <br>
     <br>
-    <p>Already have an account? please <a href="{% url 'signin'%}">   Login Here</a></p>
+    <p style="text-align: center;">Already have an account? please <a href="{% url 'signin'%}">   Login</a></p>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
