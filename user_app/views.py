@@ -41,9 +41,9 @@ def signin(request):
         if user is not None:
             auth.login(request,user)
             return redirect('home')
-        
-        messages.info(request,"Invalid username or password!")
-        return redirect('signin')
+        else:
+            messages.info(request,"Invalid username or password!")
+            return redirect('signin')
     
     return render(request,"login.html")
 
