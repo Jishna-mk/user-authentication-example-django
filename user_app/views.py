@@ -48,8 +48,7 @@ def signin(request):
     return render(request,"login.html")
 
 
-# def logout(request):
-#     return render(request,'login.html')
+
 
 def logout(request):
     auth.logout(request)
