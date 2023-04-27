@@ -29,6 +29,8 @@ def signup(request):
             user.save()
             messages.info(request,"New user created successfully!")
         return redirect('signin')
+    
+    
           
     return render(request,"register.html")
 
